@@ -1,0 +1,33 @@
+"filename", "language", "Django HTML", "TypeScript", "Markdown", "Vue", "CSS", "JSON", "Log", "JavaScript", "Less", "comment", "blank", "total"
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/README.md", "Markdown", 0, 0, 16, 0, 0, 0, 0, 0, 0, 0, 12, 28
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/index.html", "Django HTML", 13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 14
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/package-lock.json", "JSON", 0, 0, 0, 0, 0, 1121, 0, 0, 0, 0, 1, 1122
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/package.json", "JSON", 0, 0, 0, 0, 0, 28, 0, 0, 0, 0, 1, 29
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/shims.d.ts", "TypeScript", 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/App.vue", "Vue", 0, 0, 0, 50, 0, 0, 0, 0, 0, 0, 4, 54
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/app.module.css", "CSS", 0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 1, 7
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/components/HelloWorld.vue", "Vue", 0, 0, 0, 64, 0, 0, 0, 0, 0, 0, 9, 73
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/components/emiter.vue", "Vue", 0, 0, 0, 43, 0, 0, 0, 0, 0, 1, 1, 45
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/main.ts", "TypeScript", 0, 9, 0, 0, 0, 0, 0, 0, 0, 0, 2, 11
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/router/index.ts", "TypeScript", 0, 57, 0, 0, 0, 0, 0, 0, 0, 6, 5, 68
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/shims-vue.d.ts", "TypeScript", 0, 5, 0, 0, 0, 0, 0, 0, 0, 1, 1, 7
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/stores/index.ts", "TypeScript", 0, 3, 0, 0, 0, 0, 0, 0, 0, 14, 1, 18
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/stores/modules/base.ts", "TypeScript", 0, 18, 0, 0, 0, 0, 0, 0, 0, 1, 2, 21
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/styles/style.less", "Less", 0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 1, 16
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/utils/audioPlay.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 26, 0, 27, 2, 55
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/utils/utils.js", "JavaScript", 0, 0, 0, 0, 0, 0, 0, 142, 0, 36, 11, 189
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/Emiter/emit.vue", "Vue", 0, 0, 0, 28, 0, 0, 0, 0, 0, 12, 2, 42
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/myTsUse.vue", "Vue", 0, 0, 0, 84, 0, 0, 0, 0, 0, 2, 7, 93
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/refs.vue", "Vue", 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 7, 52
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/test/test.ts", "TypeScript", 0, 5, 0, 0, 0, 0, 0, 0, 0, 3, 1, 9
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/test/test.vue", "Vue", 0, 0, 0, 258, 0, 0, 0, 0, 0, 11, 28, 297
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/test/testSub.vue", "Vue", 0, 0, 0, 15, 0, 0, 0, 0, 0, 1, 3, 19
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/three/demo.vue", "Vue", 0, 0, 0, 30, 0, 0, 0, 0, 0, 16, 4, 50
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/three/index.vue", "Vue", 0, 0, 0, 91, 0, 0, 0, 0, 0, 17, 8, 116
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/useCurrentInstance.ts", "TypeScript", 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 2, 10
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/virList.vue", "Vue", 0, 0, 0, 57, 0, 0, 0, 0, 0, 6, 4, 67
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/src/vite-env.d.ts", "TypeScript", 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 2
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/tsconfig.json", "JSON", 0, 0, 0, 0, 0, 17, 0, 0, 0, 0, 1, 18
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/vite.config.ts", "TypeScript", 0, 5, 0, 0, 0, 0, 0, 0, 0, 1, 2, 8
+"/Users/keyu/Desktop/myDemo/vite/vite-vue3/yarn-error.log", "Log", 0, 0, 0, 0, 0, 0, 973, 0, 0, 0, 163, 1136
+"Total", "-", 13, 115, 16, 765, 6, 1166, 973, 168, 15, 156, 288, 3681

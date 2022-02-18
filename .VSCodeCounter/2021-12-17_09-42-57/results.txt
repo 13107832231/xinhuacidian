@@ -1,0 +1,74 @@
+Date : 2021-12-17 09:42:57
+Directory : /Users/keyu/Desktop/myDemo/vite/vite-vue3
+Total : 31 files,  3237 codes, 156 comments, 288 blanks, all 3681 lines
+
+Languages
++-------------+------------+------------+------------+------------+------------+
+| language    | files      | code       | comment    | blank      | total      |
++-------------+------------+------------+------------+------------+------------+
+| JSON        |          3 |      1,166 |          0 |          3 |      1,169 |
+| Log         |          1 |        973 |          0 |        163 |      1,136 |
+| Vue         |         11 |        765 |         66 |         77 |        908 |
+| JavaScript  |          2 |        168 |         63 |         13 |        244 |
+| TypeScript  |         10 |        115 |         27 |         17 |        159 |
+| Markdown    |          1 |         16 |          0 |         12 |         28 |
+| Less        |          1 |         15 |          0 |          1 |         16 |
+| Django HTML |          1 |         13 |          0 |          1 |         14 |
+| CSS         |          1 |          6 |          0 |          1 |          7 |
++-------------+------------+------------+------------+------------+------------+
+
+Directories
++---------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                      | files      | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                         |         31 |      3,237 |        156 |        288 |      3,681 |
+| src                                                                       |         23 |      1,059 |        155 |        107 |      1,321 |
+| src/components                                                            |          2 |        107 |          1 |         10 |        118 |
+| src/router                                                                |          1 |         57 |          6 |          5 |         68 |
+| src/stores                                                                |          2 |         21 |         15 |          3 |         39 |
+| src/stores/modules                                                        |          1 |         18 |          1 |          2 |         21 |
+| src/styles                                                                |          1 |         15 |          0 |          1 |         16 |
+| src/utils                                                                 |          2 |        168 |         63 |         13 |        244 |
+| src/views                                                                 |         10 |        621 |         68 |         66 |        755 |
+| src/views/Emiter                                                          |          1 |         28 |         12 |          2 |         42 |
+| src/views/test                                                            |          3 |        278 |         15 |         32 |        325 |
+| src/views/three                                                           |          2 |        121 |         33 |         12 |        166 |
++---------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++---------------------------------------------------------------------------+-------------+------------+------------+------------+------------+
+| filename                                                                  | language    | code       | comment    | blank      | total      |
++---------------------------------------------------------------------------+-------------+------------+------------+------------+------------+
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/README.md                       | Markdown    |         16 |          0 |         12 |         28 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/index.html                      | Django HTML |         13 |          0 |          1 |         14 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/package-lock.json               | JSON        |      1,121 |          0 |          1 |      1,122 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/package.json                    | JSON        |         28 |          0 |          1 |         29 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/shims.d.ts                      | TypeScript  |          5 |          0 |          0 |          5 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/App.vue                     | Vue         |         50 |          0 |          4 |         54 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/app.module.css              | CSS         |          6 |          0 |          1 |          7 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/components/HelloWorld.vue   | Vue         |         64 |          0 |          9 |         73 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/components/emiter.vue       | Vue         |         43 |          1 |          1 |         45 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/main.ts                     | TypeScript  |          9 |          0 |          2 |         11 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/router/index.ts             | TypeScript  |         57 |          6 |          5 |         68 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/shims-vue.d.ts              | TypeScript  |          5 |          1 |          1 |          7 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/stores/index.ts             | TypeScript  |          3 |         14 |          1 |         18 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/stores/modules/base.ts      | TypeScript  |         18 |          1 |          2 |         21 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/styles/style.less           | Less        |         15 |          0 |          1 |         16 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/utils/audioPlay.js          | JavaScript  |         26 |         27 |          2 |         55 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/utils/utils.js              | JavaScript  |        142 |         36 |         11 |        189 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/Emiter/emit.vue       | Vue         |         28 |         12 |          2 |         42 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/myTsUse.vue           | Vue         |         84 |          2 |          7 |         93 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/refs.vue              | Vue         |         45 |          0 |          7 |         52 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/test/test.ts          | TypeScript  |          5 |          3 |          1 |          9 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/test/test.vue         | Vue         |        258 |         11 |         28 |        297 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/test/testSub.vue      | Vue         |         15 |          1 |          3 |         19 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/three/demo.vue        | Vue         |         30 |         16 |          4 |         50 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/three/index.vue       | Vue         |         91 |         17 |          8 |        116 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/useCurrentInstance.ts | TypeScript  |          8 |          0 |          2 |         10 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/views/virList.vue           | Vue         |         57 |          6 |          4 |         67 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/src/vite-env.d.ts               | TypeScript  |          0 |          1 |          1 |          2 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/tsconfig.json                   | JSON        |         17 |          0 |          1 |         18 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/vite.config.ts                  | TypeScript  |          5 |          1 |          2 |          8 |
+| /Users/keyu/Desktop/myDemo/vite/vite-vue3/yarn-error.log                  | Log         |        973 |          0 |        163 |      1,136 |
+| Total                                                                     |             |      3,237 |        156 |        288 |      3,681 |
++---------------------------------------------------------------------------+-------------+------------+------------+------------+------------+

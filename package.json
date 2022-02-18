@@ -1,0 +1,33 @@
+{
+  "license": "ISC",
+  "env": {
+    "node": true
+  },
+  "name": "idiom-project",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "vue-tsc --noEmit && vite build",
+    "serve": "vite preview --host"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^0.2.7",
+    "@types/three": "^0.133.1",
+    "axios": "^0.26.0",
+    "element-plus": "^2.0.2",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "three": "^0.133.1",
+    "vue": "^3.0.5",
+    "vue-router": "4",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.18",
+    "@vitejs/plugin-vue": "^1.3.0",
+    "@vue/compiler-sfc": "^3.0.5",
+    "typescript": "^4.3.2",
+    "vite": "^2.5.0",
+    "vue-tsc": "^0.2.2"
+  }
+}
