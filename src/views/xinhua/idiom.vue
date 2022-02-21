@@ -119,7 +119,7 @@
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
             v-model:currentPage="pageOpt.currentPage"
-            :page-sizes="[20, 400, 60, 80]"
+            :page-sizes="[20, 40, 60, 80]"
             v-model:page-size="pageOpt.pageSize"
             layout="total, sizes, prev, pager, next, jumper"
             :total="pageOpt.total"
@@ -209,7 +209,7 @@
   const getPinyin = (str: any, index: number) => {
     let val = str.replace('，', ' , ').replace('、', ' 、 ')
     val = val.split(' ')[index]
-    console.log(val, 'vvv')
+    
     return val
   }
   const searchFun = () => {
@@ -224,7 +224,7 @@
         )
       : allList.value
     pageOpt.total = totalList.value.length
-    console.log(totalList.value, 'dadsasdasdas')
+
     selectedData.value = {}
   }
   const getData = (path: string) => {
@@ -235,7 +235,7 @@
       method: 'get'
     }).then((res: any) => {
       loading.value = false
-      console.log(res, 'dadas')
+
       allList.value = res
       totalList.value = res
       pageOpt.total = res.length
