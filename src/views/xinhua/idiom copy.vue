@@ -2,21 +2,19 @@
   <div class="home">
     <div class="header">
       <el-radio-group v-model="knowledgeType">
-        <el-radio-button label="GetIdioms">成语</el-radio-button>
-        <el-radio-button label="GetCis">词语</el-radio-button>
-        <el-radio-button label="GetWords">汉字</el-radio-button>
-        <el-radio-button label="GetHysterias">歇后语</el-radio-button>
+        <el-radio-button label="idiom">成语</el-radio-button>
+        <el-radio-button label="ci">词语</el-radio-button>
+        <el-radio-button label="word">汉字</el-radio-button>
+        <el-radio-button label="xiehouyu">歇后语</el-radio-button>
       </el-radio-group>
       <el-input
-        v-model="searchValue"
+        v-model="inputValue"
         class="search"
         placeholder="请输入关键字或拼音首字母进行搜索，并按回车"
         :prefix-icon="Search"
-        @keyup.enter="getData"
-        clearable
-        @clear="getData"
+        @keyup.enter="searchFun"
       />
-      <el-button type="primary" :icon="Search" @click="getData">
+      <el-button type="primary" :icon="Search" @click="searchFun">
         搜索</el-button
       >
     </div>
@@ -24,18 +22,18 @@
     <div class="content">
       <div class="left" v-loading="loading">
         <div class="scroll-box">
-          <div class="data-null" v-if="totalList.length === 0">
+          <div class="data-null" v-if="curList.length === 0">
             暂无相关搜索,请输入其他关键词
           </div>
 
           <div
             class="list-box"
-            v-if="knowledgeType === 'GetIdioms' && totalList.length > 0"
+            v-if="knowledgeType === 'idiom' && curList.length > 0"
           >
             <div
               class="item"
               :class="{ selected: selectedData.word === item.word }"
-              v-for="item in totalList"
+              v-for="item in curList"
               :key="item.word"
               @click="selectedItem(item)"
             >
@@ -53,12 +51,12 @@
           </div>
           <div
             class="list-box"
-            v-if="knowledgeType === 'GetCis' && totalList.length > 0"
+            v-if="knowledgeType === 'ci' && curList.length > 0"
           >
             <div
               class="item"
               :class="{ selected: selectedData.ci === item.ci }"
-              v-for="item in totalList"
+              v-for="item in curList"
               :key="item.ci"
               @click="selectedItem(item)"
             >
@@ -74,12 +72,12 @@
           <!-- 汉字 -->
           <div
             class="list-box"
-            v-if="knowledgeType === 'GetWords' && totalList.length > 0"
+            v-if="knowledgeType === 'word' && curList.length > 0"
           >
             <div
               class="item"
               :class="{ selected: selectedData.word === item.word }"
-              v-for="item in totalList"
+              v-for="item in curList"
               :key="item.word"
               @click="selectedItem(item)"
             >
@@ -97,12 +95,12 @@
           </div>
           <div
             class="list-box"
-            v-if="knowledgeType === 'GetHysterias' && totalList.length > 0"
+            v-if="knowledgeType === 'xiehouyu' && curList.length > 0"
           >
             <div
               class="item"
               :class="{ selected: selectedData.riddle === item.riddle }"
-              v-for="item in totalList"
+              v-for="item in curList"
               :key="item.riddle"
               @click="selectedItem(item)"
             >
@@ -121,7 +119,7 @@
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
             v-model:currentPage="pageOpt.currentPage"
-            :page-sizes="[10, 20, 40, 60, 80]"
+            :page-sizes="[20, 40, 60, 80]"
             v-model:page-size="pageOpt.pageSize"
             layout="total, sizes, prev, pager, next, jumper"
             :total="pageOpt.total"
@@ -170,8 +168,8 @@
   import axios from '@/utils/axios'
   import { Search } from '@element-plus/icons-vue'
   const loading: Ref = ref(false)
-  const knowledgeType: Ref = ref('GetIdioms')
-  const searchValue: Ref = ref('')
+  const knowledgeType: Ref = ref('idiom')
+  const inputValue: Ref = ref('')
   // 分页参数
   const pageOpt = reactive({
     pageSize: 10,
@@ -183,22 +181,27 @@
   const allList: Ref = ref([])
   // 当前搜索条件下的总数据
   const totalList: Ref = ref([])
-
+  // 当前页面的数据
+  const curList = computed(() => {
+    const { currentPage, pageSize } = pageOpt
+    return totalList.value.slice(
+      (currentPage - 1) * pageSize,
+      currentPage * pageSize
+    )
+  })
   watch(knowledgeType, (cur, pre) => {
     /* ... */
     allList.value = []
     totalList.value = []
     pageOpt.total = 0
-    getData()
+    getData(`/${cur}.json`)
   })
 
   const handleSizeChange = (val: any) => {
     console.log(`每页 ${val} 条`)
-    getData()
   }
   const handleCurrentChange = (val: any) => {
     console.log(`当前页: ${val}`)
-    getData()
   }
   const selectedItem = (item: any) => {
     selectedData.value = item
@@ -209,28 +212,38 @@
 
     return val
   }
+  const searchFun = () => {
+    inputValue.value = inputValue.value.trim()
+    totalList.value = inputValue.value
+      ? allList.value.filter(
+          (item: any) =>
+            item.word?.indexOf(inputValue.value) >= 0 || // 类型为成语、汉字时的关键字搜索
+            item.abbreviation?.indexOf(inputValue.value) >= 0 || // 类型为成语时的关键字搜索
+            item.ci?.indexOf(inputValue.value) >= 0 || // 类型为词语时的关键字搜索
+            item.riddle?.indexOf(inputValue.value) >= 0 // 类型为歇后语时的关键字搜索
+        )
+      : allList.value
+    pageOpt.total = totalList.value.length
 
-  const getData = () => {
+    selectedData.value = {}
+  }
+  const getData = (path: string) => {
     loading.value = true
 
     axios({
-      url: `/services/app/ChineseDictionary/${knowledgeType.value}`,
-      method: 'get',
-      params: {
-        pageSize: pageOpt.pageSize,
-        currentPage: pageOpt.currentPage,
-        searchValue: searchValue.value.trim()
-      }
+      url: path,
+      method: 'get'
     }).then((res: any) => {
       loading.value = false
-      let list = res.result.records
-      totalList.value = list
-      pageOpt.total = res.result.total
+
+      allList.value = res
+      totalList.value = res
+      pageOpt.total = res.length
     })
   }
 
   onMounted(() => {
-    getData()
+    getData(`/${knowledgeType.value}.json`)
   })
 </script>
 
@@ -262,7 +275,7 @@
       height: calc(100vh - 80px);
       display: flex;
       .left {
-        width: 70%;
+        width: 60%;
         height: 100%;
         display: flex;
         flex-direction: column;

@@ -6,7 +6,7 @@ const baseURL: string = import.meta.env.VITE_API_BASE_URL
 
 const request = axios.create({
   baseURL: baseURL,
-  timeout: 5000, // request timeout
+  timeout: 30000, // request timeout
 })
 
 // 发起请求之前的拦截器
