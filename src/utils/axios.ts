@@ -1,9 +1,5 @@
 import axios from 'axios'
-
-
-
 const baseURL: string = import.meta.env.VITE_API_BASE_URL
-
 const request = axios.create({
   baseURL: baseURL,
   timeout: 30000, // request timeout
