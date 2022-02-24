@@ -179,25 +179,24 @@
     total: 0
   })
   const selectedData: Ref = ref({})
-  // 获取所有数据
-  const allList: Ref = ref([])
+
   // 当前搜索条件下的总数据
   const totalList: Ref = ref([])
 
   watch(knowledgeType, (cur, pre) => {
     /* ... */
-    allList.value = []
+    searchValue.value = ''
     totalList.value = []
     pageOpt.total = 0
     getData()
   })
 
   const handleSizeChange = (val: any) => {
-    console.log(`每页 ${val} 条`)
+    // console.log(`每页 ${val} 条`)
     getData()
   }
   const handleCurrentChange = (val: any) => {
-    console.log(`当前页: ${val}`)
+    // console.log(`当前页: ${val}`)
     getData()
   }
   const selectedItem = (item: any) => {
